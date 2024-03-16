@@ -8,31 +8,31 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="doomstalker_noroll.json">
+    <None Update="angryface_noroll.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="sunkeeper_four_sun.json">
+    <None Update="sun_four_sun.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="sunkeeper_maxroll.json">
+    <None Update="sun_maxroll.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="sunkeeper_two_sun_three_curse.json">
+    <None Update="sun_two_sun_three_curse.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="sunkeeper_two_sun.json">
+    <None Update="sun_two_sun.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="sunkeeper_noroll.json">
+    <None Update="sun_noroll.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="sunkeeper.json">
+    <None Update="sun.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="normal.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="doomstalker.json">
+    <None Update="angryface.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
