@@ -9,7 +9,7 @@
         {
             Cards = cardValues.SelectMany(cg =>
                 Enumerable.Repeat(cg, cg.Count)
-                    .Select(cg => new Card(cg.Tag, cg.Value, cg.Rolling, cg.Terminal)))
+                    .Select(Card.FromCardGroup))
                 .ToList();
             Engine = (TEngine)(Activator.CreateInstance(typeof(TEngine), args: [Cards]) ?? throw new ArgumentException());
         }

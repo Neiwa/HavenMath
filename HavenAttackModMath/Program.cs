@@ -2,15 +2,17 @@
 using HavenAttackModMath;
 using System.Diagnostics;
 
+var serializerOptions = new System.Text.Json.JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+
 for (int iArg = 0; iArg < args.Length; iArg++)
 {
     var jsonString = File.ReadAllText(args[iArg]);
 
     //var jsonString = "[{'tag': '0', 'value': 0, 'rolling': true, 'count': 6}, {'tag': '+1', 'value': 10, 'rolling': false, 'count': 5}, {'tag': '-1', 'value': -10, 'rolling': false, 'count': 5}]".Replace("'", "\"");
 
-    var cardGroups = System.Text.Json.JsonSerializer.Deserialize<List<CardGroup>>(jsonString, new System.Text.Json.JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? throw new ArgumentException();
+    var cardGroups = System.Text.Json.JsonSerializer.Deserialize<List<CardGroup>>(jsonString, serializerOptions) ?? throw new ArgumentException();
 
-    var cards = cardGroups.Select(cg => new Card(cg.Tag, cg.Value, cg.Rolling, cg.Terminal)).ToList();
+    var cards = cardGroups.Select(Card.FromCardGroup).ToList();
 
     var variants = Enum.GetValues<Game>().SelectMany(g => Enum.GetValues<AttackKind>().Select(k => new Variant(g, k))).ToList();
     var variantsResults = variants.ToDictionary(v => v, _ => cards.ToDictionary(key => key, _ => 0));
@@ -32,7 +34,7 @@ for (int iArg = 0; iArg < args.Length; iArg++)
 
     sw.Stop();
 
-    Console.WriteLine($"{args[iArg]} {iterations * variants.Count:# ### ### ### ###} attacks in {sw.Elapsed:s\\.fff} sec");
+    Console.WriteLine($"{args[iArg],-40} {iterations * variants.Count:# ### ### ### ###} attacks in {sw.Elapsed:s\\.fff} sec");
 
     int getNegative(Dictionary<Card, int> dict)
     {
@@ -59,7 +61,7 @@ for (int iArg = 0; iArg < args.Length; iArg++)
         const int valueLength = 6;
         var valueString = string.Join(" || ", Enum.GetValues<Game>().Select(g => string.Join(" | ", Enum.GetValues<AttackKind>().Select(k => fn(new Variant(g, k))[..valueLength]))));
 
-        Console.WriteLine($" {what,-5} | {valueString,-valueLength} |");
+        Console.WriteLine($" {what,5} | {valueString,-valueLength} |");
     }
     void writeRow(string what, Func<Dictionary<Card, int>, int> fn)
     {
