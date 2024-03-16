@@ -8,31 +8,31 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="angryface_noroll.json">
+    <None Update="decks\angryface\angryface_noroll.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="sun_four_sun.json">
+    <None Update="decks\sun\sun_four_sun.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="sun_maxroll.json">
+    <None Update="decks\sun\sun_maxroll.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="sun_two_sun_three_curse.json">
+    <None Update="decks\sun\sun_two_sun_three_curse.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="sun_two_sun.json">
+    <None Update="decks\sun\sun_two_sun.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="sun_noroll.json">
+    <None Update="decks\sun\sun_noroll.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="sun.json">
+    <None Update="decks\sun\sun.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="normal.json">
+    <None Update="decks\base.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="angryface.json">
+    <None Update="decks\angryface\angryface.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

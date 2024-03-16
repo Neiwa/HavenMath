@@ -2,8 +2,7 @@
   "profiles": {
     "HavenMath": {
       "commandName": "Project",
-      "commandLineArgs": "sunkeeper_two_sun.json sunkeeper_two_sun_three_curse.json",
-      //"commandLineArgs": "sunkeeper_noroll.json sunkeeper_two_sun.json sunkeeper_four_sun.json"
+      "commandLineArgs": "decks/sun/sun_two_sun.json decks/sun/sun_two_sun_three_curse.json"
     }
   }
 }
