@@ -1,0 +1,40 @@
+﻿[
+  {
+    "tag": "x2",
+    "value": 100,
+    "terminal": true,
+    "count": 1
+  },
+  {
+    "tag": "+2",
+    "value": 20,
+    "count": 1
+  },
+  {
+    "tag": "+1",
+    "value": 9,
+    "count": 4,
+    "rolling":  true
+  },
+  {
+    "tag": "+1",
+    "value": 10,
+    "count": 11
+  },
+  {
+    "tag": "-1",
+    "value": -10,
+    "count": 1
+  },
+  {
+    "tag": "-2",
+    "value": -20,
+    "count": 1
+  },
+  {
+    "tag": "/",
+    "value": -100,
+    "terminal": true,
+    "count": 1
+  }
+]

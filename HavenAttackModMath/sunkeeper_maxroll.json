@@ -1,0 +1,64 @@
+﻿[
+  {
+    "tag": "x2",
+    "value": 100,
+    "terminal": true,
+    "count": 1
+  },
+  {
+    "tag": "+2",
+    "value": 20,
+    "count": 2
+  },
+  {
+    "tag": "+1",
+    "value": 11,
+    "count": 4,
+    "rolling": true
+  },
+  {
+    "tag": "+1",
+    "value": 10,
+    "count": 7
+  },
+  {
+    "tag": "S",
+    "value": 9,
+    "count": 1,
+    "rolling": true
+  },
+  {
+    "tag": "H",
+    "value": 3,
+    "count": 4,
+    "rolling": true
+  },
+  {
+    "tag": "D",
+    "value": 2,
+    "count": 2,
+    "rolling": true
+  },
+  {
+    "tag": "O",
+    "value": 1,
+    "count": 4,
+    "rolling": true
+  },
+  {
+    "tag": "0",
+    "value": 0,
+    "count": 2
+  },
+  {
+    "tag": "-1",
+    "value": -10,
+    "count": 1
+  },
+  {
+    "tag": "/",
+    "value": -100,
+    "terminal": true,
+    "count": 1
+  }
+]
